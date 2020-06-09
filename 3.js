@@ -1,4 +1,4 @@
- var emailArray=[];
+  var emailArray=[];
         var passwordArray=[];
         var loginBox = document.getElementById("login");
         var regBox = document.getElementById("register");
@@ -65,6 +65,8 @@
             else if(emailArray.indexOf(email) == -1){
                 emailArray.push(email);
                 passwordArray.push(password);
+                localStorage.setItem('re', JSON.stringify(emailArray));
+                localStorage.setItem('rp', JSON.stringify(passwordArray));
                 alert(email + "  Thanks for registration. \nTry to login Now");
 
                 document.getElementById("re").value ="";
@@ -72,7 +74,7 @@
                 document.getElementById("rrp").value="";
                 return;
             }
-            else{
+                else{
                 alert(email + " is already register.");
                 return ;
             }
@@ -82,10 +84,11 @@
 
             var email = document.getElementById("se").value;
             var password = document.getElementById("sp").value;
-
-            var i = emailArray.indexOf(email);
-
-            if(emailArray.indexOf(email) == -1){
+            var storedemail = localStorage.getItem('re');
+            var storedPw = localStorage.getItem('rp');
+            var ste= JSON.parse(storedemail);
+            var pass= JSON.parse(storedPw);
+            if(ste != email){
                 if (email == ""){
                     alert("Email required.");
                     return ;
@@ -93,7 +96,7 @@
                 alert("Email does not exist.");
                 return ;
             }
-            else if(passwordArray[i] != password){
+            else if(pass != password){
                 if (password == ""){
                     alert("Password required.");
                     return ;
@@ -102,20 +105,25 @@
                 return ;
             }
             else {
-                alert(email + " yor are login Now \n welcome to our website.");
+                
+                alert(email + " You are login Now \n welcome to MRA CHATROOM.");
                 location.href ="tochat/3.html";
                 document.getElementById("se").value ="";
                 document.getElementById("sp").value="";
+                         
                 return ;
+
             }
 
         }
         function forgot(){
             event.preventDefault();
-
             var email = document.getElementById("fe").value;
-            var i = emailArray.indexOf(email);
-            if(emailArray.indexOf(email) == -1){
+            var storedE = localStorage.getItem('re');
+            var storedP = localStorage.getItem('rp');
+            var st= JSON.parse(storedE);
+            var pas= JSON.parse(storedP);
+            if(st!= email){
                 if (email == ""){
                     alert("Email required.");
                     return ;
@@ -123,8 +131,6 @@
                 alert("Email does not exist.");
                 return ;
             }
-                    var s=passwordArray[i]; 
-                    alert("Password is :" +s);
+                    alert("Password is :" +pas);
             document.getElementById("fe").value ="";
         }
-    
