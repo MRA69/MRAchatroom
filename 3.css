@@ -1,0 +1,98 @@
+      * {
+            padding: 0;
+            margin: 0;
+            /*box-size:border-box;*/
+        }
+        #container {
+             width: 300px;
+             margin: 0 auto;
+             margin-top: 40px;
+             margin-left: 300px;
+        }
+            .tabs {
+            display: table-cell;
+            width: 40%;
+            background-color: rgba(0, 180, 230);
+            padding: 10px;
+            float: left;
+            text-align: center;
+            vertical-align: middle;
+            border: 2px solid rgba(0, 180, 230);
+            border-bottom: 0px;
+            position: relative;
+            font-size: 1.3em;
+            font-family: 'Monoton', cursive;
+            color: #ffffff;
+            border: 3px solid rgba(0, 180, 230);
+            border-radius: 4px;
+           -webkit-box-shadow:  0px 0px 8px 3px rgba(0, 180, 230);
+            box-shadow: 0px 0px 10px 3px rgba(0, 180, 230), inset 0px 0px 10px 3px rgba(0, 180, 230);
+            margin-bottom: 15px;
+        }
+        p{
+          cursor: pointer;  
+        }
+
+        #rt {
+            background-color: black;
+        }
+        #cont {
+            width: 100%;
+            height: 300px;
+            background-color:transparent rgba(11, 177, 224, 0.82);
+            border: 3px solid rgba(0, 180, 230);
+            border-radius: 4px;
+           -webkit-box-shadow:  0px 0px 8px 3px rgba(0, 180, 230);
+            box-shadow: 0px 0px 10px 3px rgba(0, 180, 230), inset 0px 0px 10px 3px rgba(0, 180, 230);
+        }
+        
+        input{
+            display: block;
+            width: 250px;
+            margin: 10px 13px;
+            padding: 10px;
+            font-size: 1.3em;
+            color: rgba(11, 177, 224, 0.82);
+            outline: none;
+        }
+
+        input[type="submit"] {
+            width: 272px;
+            color: #6e6e6e;
+        }
+
+        #clear {
+            clear: both;
+        }
+
+        .comm {
+            position: absolute;
+            visibility: hidden;
+        }
+        #login {
+            visibility: visible;
+        }
+
+        h3 {
+            display: table-cell;
+            vertical-align: middle;
+            padding: 10px 15px;
+            font-size: 1.5em;
+            color: #ffffff;
+            font-family: comic sans MS;
+        }
+
+        #forgot h3 {
+            display: block;
+            margin-top: 30px;
+            text-align: center;
+        }
+
+        #forgot div {
+            margin-top: 30px;
+        }
+        p {
+            padding: 10px 15px;
+            font-size: 1.3em;
+            color: #ffffff;
+        }
